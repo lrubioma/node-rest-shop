@@ -20,7 +20,7 @@ Product.find()
         _id: doc._id,
         request: {
           type: 'GET',
-          url: 'http://localhost:3000/products/' + doc._id
+          url: 'http://EC2_HOME:3000/products/' + doc._id
         }
       }
     })
@@ -59,7 +59,7 @@ product
       _id:result._id,
       request: {
         type: 'GET',
-        url: 'http://localhost/products/' + result._id
+        url: 'http://EC2_HOME:3000/products/' + result._id
       }
     }
     });
@@ -88,7 +88,7 @@ router.get('/:productId', function (req, res, next) {
        _id: doc._id,
        request:{
          type:'GET',
-         url: 'http://localhost:3000/products/'+id
+         url: 'http://EC2_HOME:3000/products/'+id
        }
      });
    } else {
@@ -118,7 +118,7 @@ Product.update({_id: id}, {$set: updateOps })
     res.status(200).json({
       request:{
         type:'GET',
-        url: 'http://localhost:3000/products/'+id
+        url: 'http://EC2_HOME:3000/products/'+id
       }
     });
   })
