@@ -9,7 +9,7 @@ var orderRoutes = require('./api/routes/orders');
 
 var mongoose =require ('mongoose');
 
-mongoose.connect(url,{ useNewUrlParser: true });
+mongoose.connect(url);
 mongoose.Promise = global.Promise;
 
 app.use(morgan('dev'));
